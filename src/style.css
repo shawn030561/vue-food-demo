@@ -1,0 +1,212 @@
+:root {
+  --red: #b5342e;
+  --gold: #c9a23b;
+  --ink: #1f1a17;
+  --cream: #fdf9f3;
+  --mist: #f4efe7;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "PingFang SC", "Microsoft YaHei", "Noto Sans SC", sans-serif;
+  background: linear-gradient(to bottom, #fdf9f3 0%, #faf6ee 100%);
+  color: var(--ink);
+  -webkit-font-smoothing: antialiased;
+}
+
+/* 导航 */
+.navbar {
+  background: linear-gradient(150deg, #120904 0%, #2a100a 100%);
+  color: var(--cream);
+  padding: 0 24px;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+.brand {
+  color: var(--gold);
+  font-weight: 700;
+  letter-spacing: 0.15em;
+  text-decoration: none;
+  font-size: 18px;
+}
+.navbar nav a {
+  color: rgba(253, 249, 243, 0.82);
+  text-decoration: none;
+  margin-left: 20px;
+  font-size: 14px;
+  letter-spacing: 0.08em;
+  padding-bottom: 2px;
+  border-bottom: 1px solid transparent;
+}
+.navbar nav a.router-link-active {
+  color: var(--gold);
+  border-bottom-color: var(--gold);
+}
+
+main {
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 24px;
+}
+
+/* Hero */
+.hero {
+  text-align: center;
+  padding: 32px 0 20px;
+}
+.hero h1 {
+  font-size: 40px;
+  font-weight: 700;
+}
+.hero h1 span {
+  color: var(--gold);
+}
+.hero p {
+  color: #8a8178;
+  margin-top: 6px;
+  font-size: 14px;
+}
+
+/* 筛选 */
+.filters {
+  display: flex;
+  gap: 12px;
+  margin: 20px 0;
+  flex-wrap: wrap;
+}
+.filters input,
+.filters select {
+  padding: 10px 14px;
+  border: 1px solid #e2dcd5;
+  background: #fff;
+  font-size: 14px;
+  outline: none;
+  border-radius: 2px;
+}
+.filters input {
+  flex: 1;
+  min-width: 200px;
+}
+.filters input:focus,
+.filters select:focus {
+  border-color: var(--red);
+}
+
+/* 卡片网格 */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  gap: 16px;
+}
+.card {
+  background: #fff;
+  border: 1px solid #efe9e0;
+  padding: 20px;
+  text-decoration: none;
+  color: var(--ink);
+  transition: all 0.25s ease;
+  border-radius: 4px;
+}
+.card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.08);
+}
+.card .emoji {
+  font-size: 40px;
+}
+.card h3 {
+  margin: 10px 0 4px;
+  font-size: 17px;
+}
+.region {
+  color: var(--red);
+  font-size: 13px;
+  letter-spacing: 0.1em;
+}
+
+/* 标签 */
+.tags {
+  display: flex;
+  gap: 6px;
+  flex-wrap: wrap;
+  margin-top: 10px;
+}
+.tag {
+  background: var(--mist);
+  color: #6b625a;
+  font-size: 12px;
+  padding: 2px 8px;
+  border-radius: 2px;
+}
+
+/* 详情 */
+.page-title {
+  font-size: 24px;
+  margin-bottom: 16px;
+}
+.back {
+  background: none;
+  border: none;
+  color: var(--red);
+  cursor: pointer;
+  font-size: 14px;
+  margin-bottom: 12px;
+  padding: 0;
+}
+.detail {
+  background: #fff;
+  border: 1px solid #efe9e0;
+  padding: 28px;
+  border-radius: 4px;
+}
+.detail .emoji {
+  font-size: 64px;
+}
+.detail h2 {
+  font-size: 26px;
+  margin: 10px 0 6px;
+}
+.detail .desc {
+  color: #4a443d;
+  margin: 14px 0;
+  line-height: 1.7;
+}
+.stars {
+  color: var(--gold);
+  letter-spacing: 2px;
+}
+
+/* 收藏按钮 */
+.fav {
+  margin-top: 16px;
+  padding: 10px 22px;
+  border: 1px solid var(--red);
+  background: #fff;
+  color: var(--red);
+  cursor: pointer;
+  border-radius: 2px;
+  font-size: 14px;
+  letter-spacing: 0.1em;
+  transition: all 0.2s;
+}
+.fav.active {
+  background: var(--red);
+  color: #fff;
+}
+
+.empty {
+  text-align: center;
+  color: #a79f96;
+  padding: 40px 0;
+  font-size: 14px;
+}
