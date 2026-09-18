@@ -22,7 +22,7 @@ function toggle(): void {
     <button class="back" @click="$router.back()">← 返回</button>
 
     <div class="detail">
-      <div class="emoji">{{ dish.emoji }}</div>
+      <img class="detail-img" :src="dish.image" :alt="dish.name" />
       <h2>{{ dish.name }}</h2>
       <p class="region">
         {{ dish.region }} · <RatingStars :value="dish.rating" />
