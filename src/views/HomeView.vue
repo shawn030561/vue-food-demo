@@ -25,7 +25,6 @@ const filtered = computed(() =>
 <template>
   <section class="hero">
     <h1>食味<span>清单</span></h1>
-    <p>Vue 3 + TypeScript + Pinia 构建的美食收藏清单 Demo</p>
   </section>
 
   <section class="filters">

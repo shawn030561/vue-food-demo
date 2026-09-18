@@ -6,7 +6,7 @@ defineProps<{ dish: Dish }>();
 
 <template>
   <router-link :to="`/dish/${dish.id}`" class="card">
-    <div class="emoji">{{ dish.emoji }}</div>
+    <img class="card-img" :src="dish.image" :alt="dish.name" />
     <h3>{{ dish.name }}</h3>
     <p class="region">{{ dish.region }}</p>
     <div class="tags">
